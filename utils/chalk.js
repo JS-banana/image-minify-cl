@@ -1,5 +1,5 @@
-// const chalk = require("chalk")
-import chalk from "chalk"
+const chalk = require("chalk")
+// import chalk from "chalk"
 const colors = ["green", "blue", "yellow", "red"]
 const consoleColors = {}
 /* console color */
@@ -8,4 +8,4 @@ colors.forEach((color) => {
     return isConsole ? console.log(chalk[color](text)) : chalk[color](text)
   }
 })
-export default consoleColors
+module.exports = consoleColors
