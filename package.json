@@ -2,7 +2,6 @@
   "name": "imagemin",
   "version": "0.0.1",
   "description": "",
-  "type": "module",
   "main": "./bin/mycli.js",
   "bin": {
     "mycli ": "./bin/mycli.js"
