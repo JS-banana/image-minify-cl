@@ -8,13 +8,15 @@
 
 ## 安装
 
-`npm install image-minify-cli`
+`npm install image-minify-cli -D`
 
-`pnpm add image-minify-cli`
+`pnpm add -D image-minify-cli`
 
-`yarn add image-minify-cli`
+`yarn add image-minify-cli -D`
 
 ## 使用
+
+一.命令行使用
 
 查看版本：`imagemin -v`
 
@@ -29,7 +31,7 @@ png压缩插件：`imagemin-pngquant`
 文件出口：同入口（压缩完成后直接替换源文件）
 
 ```js
-const imagemin_fn = async (input, output) => {
+async (input, output) => {
   const result = await imagemin(input, {
     destination: output,
     plugins: [
@@ -46,3 +48,13 @@ const imagemin_fn = async (input, output) => {
   return result
 }
 ```
+
+二.node执行使用
+
+`imagemin.js`
+
+```js
+require("image-minify-cli")
+```
+
+`node imagemin.js start`
