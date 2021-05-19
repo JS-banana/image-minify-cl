@@ -8,6 +8,8 @@
 
 ![imagemin](imagemin.png)
 
+![imagemin-log](imagemin-log.png)
+
 ## 安装
 
 `npm install image-minify-cli -D`
