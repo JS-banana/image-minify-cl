@@ -1,7 +1,13 @@
 {
   "name": "image-minify-cli",
   "version": "0.0.1",
-  "description": "",
+  "description": "Minify images",
+  "author": "JS-banana",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JS-banana/image-minify-cl.git"
+  },
+  "homepage": "https://github.com/JS-banana/image-minify-cl#readme",
   "main": "./bin/mycli.js",
   "bin": {
     "imagemin ": "./bin/image-minify-cli"
@@ -10,10 +16,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "image-minify-cli"
+    "image-minify-cli",
+    "compress jpg png",
+    "minify jpg png"
   ],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.2.1",
