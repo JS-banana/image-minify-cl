@@ -30,7 +30,6 @@
     "graceful-fs": "^4.2.6",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-pngquant": "^9.0.2",
-    "inquirer": "^7.3.3",
     "junk": "^3.1.0",
     "ora": "^5.4.0",
     "p-pipe": "^4.0.0",
