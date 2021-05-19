@@ -1,24 +1,45 @@
-# image-minify-cli
+<div align="center">
+  <img src="imagemin.png" width="600"  alt="logo" />
+  <h1>image-minify-cli</h1>
+  <P>
+    <a href="https://github.com/JS-banana/image-minify-cli/stargazers" target="_black">
+      <img src="https://img.shields.io/github/stars/JS-banana/image-minify-cl?color=%23ffca28&logo=github&style=flat-square" alt="stars" />
+    </a>
+    <a href="https://www.npmjs.com/package/image-minify-cli" target="_black">
+      <img src="https://img.shields.io/npm/v/image-minify-cli.svg?style=flat" alt="version" />
+    </a>
+    <a href="https://www.npmjs.com/package/image-minify-cli" target="_black">
+      <img src="https://img.shields.io/npm/dm/image-minify-cli" alt="downloads" />
+    </a>
+     <a href="https://github.com/JS-banana" target="_black">
+      <img src="https://img.shields.io/badge/Github-JS--banana-brightgreen?&logo=github&style=flat-square" alt="author" />
+    </a
+  </p>
+</div>
 
-## 描述
+<!-- # image-minify-cli -->
+
+## ✨ 描述
 
 `image-minify-cli`是为解决项目使用时手动压缩图片的繁琐操作，通过`cli`命令一键压缩。
 
 建议在发布前执行一次即可，压缩完成后会在当前目录下生成日志`imagemin.log`方便查看。
 
-![imagemin](imagemin.png)
+<!-- ![imagemin](imagemin.png) -->
 
 ![imagemin-log](imagemin-log.png)
 
-## 安装
+## 📦 安装
 
-`npm install image-minify-cli -D`
+```shell
+pnpm add -D image-minify-cli
+# or
+yarn add image-minify-cli -D
+# or
+npm install image-minify-cli -D
+```
 
-`pnpm add -D image-minify-cli`
-
-`yarn add image-minify-cli -D`
-
-## 使用
+## 🚀 使用
 
 - 默认配置：
 
@@ -70,3 +91,16 @@
 > 查看版本：`imagemin -v`
 
 > 开始压缩：`imagemin start`
+
+```shell
+pnpm add chore-cli -g
+# or
+yarn global add chore-cli
+# or
+npm install chore-cli -g
+```
+
+## ✅ Todo
+
+[x] 自定义配置
+[x] 命令行动态传参
