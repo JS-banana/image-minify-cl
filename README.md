@@ -1,5 +1,6 @@
 <div align="center">
   <img src="imagemin.png" width="600"  alt="logo" />
+  <img src="imagemin-log.png" width="600"  alt="logo" />
   <h1>image-minify-cli</h1>
   <P>
     <a href="https://github.com/JS-banana/image-minify-cli/stargazers" target="_black">
@@ -27,7 +28,7 @@
 
 <!-- ![imagemin](imagemin.png) -->
 
-![imagemin-log](imagemin-log.png)
+<!-- ![imagemin-log](imagemin-log.png) -->
 
 ## 📦 安装
 
