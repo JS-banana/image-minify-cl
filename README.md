@@ -1,29 +1,48 @@
-# imagemin
+# image-minify-cli
 
-## 目标
+## 描述
 
-- 命令行执行，对整个文件夹内的所有图片进行压缩
-- 可配置参数
-  - 输入、输出path
-  - jpeg、png
-  - 压缩算法、压缩质量
-  - 日志打印
+`image-minify-cli`是为解决项目使用时手动压缩图片的繁琐操作，通过`cli`命令一键压缩。
 
-## 待解决
+建议在发布前执行一次即可，压缩完成后会在当前目录下生成日志`imagemin.log`方便查看。
 
-- 输入多层嵌套文件夹结构，输出全部到一级目录下
+## 安装
 
-## 命令
+`npm install image-minify-cli`
 
-- -v --version ：查看版本信息
-- start : 启动压缩
+`pnpm add image-minify-cli`
 
-## 相关开源库
+`yarn add image-minify-cli`
 
-1. <https://www.npmjs.com/package/compress-images>
-2. <https://github.com/fengyuanchen/compressorjs>
-3. <https://github.com/Donaldcwl/browser-image-compression>
-4. <https://github.com/Klathmon/imagemin-webpack-plugin>
-5. <https://github.com/lovell/sharp>
-6. <https://github.com/libvips/libvips>
-7. <https://github.com/imagemin/imagemin>
+## 使用
+
+查看版本：`imagemin -v`
+
+开始压缩：`imagemin start`
+
+默认配置：
+
+jpg压缩插件：`imagemin-jpegtran`
+png压缩插件：`imagemin-pngquant`
+
+文件入口：当前目录下的 `./src.assets`
+文件出口：同入口（压缩完成后直接替换源文件）
+
+```js
+const imagemin_fn = async (input, output) => {
+  const result = await imagemin(input, {
+    destination: output,
+    plugins: [
+      imageminJpegtran({
+        progressive: true, // 开启无损压缩
+        arithmetic: true, // 开启算法
+      }),
+      imageminPngquant({
+        // speed: 10,
+        quality: [0.3, 0.5], // 压缩质量
+      }),
+    ],
+  })
+  return result
+}
+```

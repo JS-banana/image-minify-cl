@@ -1,30 +1,30 @@
 {
-  "name": "imagemin",
+  "name": "image-minify-cli",
   "version": "0.0.1",
   "description": "",
   "main": "./bin/mycli.js",
   "bin": {
-    "mycli ": "./bin/mycli.js"
+    "imagemin ": "./bin/image-minify-cli"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "image-minify-cli"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.2.1",
     "file-type": "^14.6.0",
-    "fs-extra": "^9.1.0",
     "globby": "^11.0.3",
     "graceful-fs": "^4.2.6",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-pngquant": "^9.0.2",
-    "imagemin-svgo": "^9.0.0",
-    "imagemin-webp": "^6.0.0",
     "inquirer": "^7.3.3",
     "junk": "^3.1.0",
+    "ora": "^5.4.0",
     "p-pipe": "^4.0.0",
     "replace-ext": "^2.0.0",
     "util": "^0.12.3"
