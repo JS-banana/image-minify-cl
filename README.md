@@ -44,13 +44,11 @@ npm install image-minify-cli -D
 
 - ***默认配置***：
 
-    支持图片格式：`.{jpg,JPG,jpeg,JPEG,png}`
-
-    jpg压缩插件：`imagemin-jpegtran`
-    png压缩插件：`imagemin-pngquant`
-
-    文件入口：当前目录下的 `./src/assets`
-    文件出口：同入口（压缩完成后直接替换源文件）
+  - 支持图片格式：`.{jpg,JPG,jpeg,JPEG,png}`
+  - jpg压缩插件：`imagemin-jpegtran`
+  - png压缩插件：`imagemin-pngquant`
+  - 文件入口：当前目录下的 `./src/assets`
+  - 文件出口：同入口（压缩完成后直接替换源文件）
 
 - ***主要代码***
 
@@ -83,7 +81,7 @@ npm install image-minify-cli -D
 
 2. 执行脚本
 
-`node imagemin.js start`
+    `node imagemin.js start`
 
 二.***命令行使用***
 
