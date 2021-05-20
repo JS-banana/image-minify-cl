@@ -42,7 +42,7 @@ npm install image-minify-cli -D
 
 ## 🚀 使用
 
-- 默认配置：
+- ***默认配置***：
 
     支持图片格式：`.{jpg,JPG,jpeg,JPEG,png}`
 
@@ -52,7 +52,7 @@ npm install image-minify-cli -D
     文件入口：当前目录下的 `./src/assets`
     文件出口：同入口（压缩完成后直接替换源文件）
 
-- 主要代码
+- ***主要代码***
 
   ```js
   async (input, output) => {
@@ -73,7 +73,7 @@ npm install image-minify-cli -D
   }
   ```
 
-一.以插件形式使用
+一.***以插件形式使用***
 
 1. 根目录下创建 `imagemin.js` 文件
 
@@ -85,23 +85,23 @@ npm install image-minify-cli -D
 
 `node imagemin.js start`
 
-二.命令行使用
+二.***命令行使用***
 
 *该功能需要全局安装，推荐先使用第一种方式*
 
 > 查看版本：`imagemin -v`
-
+>
 > 开始压缩：`imagemin start`
 
 ```shell
-pnpm add chore-cli -g
+pnpm add image-minify-cli -g
 # or
-yarn global add chore-cli
+yarn global add image-minify-cli
 # or
-npm install chore-cli -g
+npm install image-minify-cli -g
 ```
 
 ## ✅ Todo
 
-[x] 自定义配置
-[x] 命令行动态传参
+- [ ] 自定义配置
+- [ ] 命令行动态传参
