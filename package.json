@@ -1,6 +1,6 @@
 {
   "name": "image-minify-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Minify images",
   "author": "JS-banana",
   "repository": {
@@ -19,7 +19,10 @@
   "keywords": [
     "image-minify-cli",
     "compress jpg png",
-    "minify jpg png"
+    "minify jpg png",
+    "image",
+    "jpg",
+    "png"
   ],
   "license": "MIT",
   "dependencies": {
