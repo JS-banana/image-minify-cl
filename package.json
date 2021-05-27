@@ -10,7 +10,7 @@
   "homepage": "https://github.com/JS-banana/image-minify-cl#readme",
   "main": "./index.js",
   "bin": {
-    "imagemin ": "./bin/image-minify-cli.js"
+    "imagemin": "./bin/image-minify-cli.js"
   },
   "scripts": {
     "start": "node index.js",
