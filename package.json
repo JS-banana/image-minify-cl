@@ -1,7 +1,7 @@
 {
   "name": "image-minify-cli",
-  "version": "0.0.5",
-  "description": "Minify images",
+  "version": "0.1.0",
+  "description": "Minify images：一键压缩项目中的图片。",
   "author": "JS-banana",
   "repository": {
     "type": "git",

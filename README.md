@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="imagemin.png" width="600"  alt="logo" />
-  <img src="imagemin-log.png" width="600"  alt="logo" />
   <h1>image-minify-cli</h1>
   <P>
     <a href="https://github.com/JS-banana/image-minify-cli/stargazers" target="_black">
@@ -16,6 +14,7 @@
       <img src="https://img.shields.io/badge/Github-JS--banana-brightgreen?&logo=github&style=flat-square" alt="author" />
     </a
   </p>
+  <img src="imagemin.png" width="600"  alt="logo" />
 </div>
 
 <!-- # image-minify-cli -->
@@ -50,46 +49,42 @@ npm install image-minify-cli -D
   - 文件入口：当前目录下的 `./src/assets`
   - 文件出口：同入口（压缩完成后直接替换源文件）
 
-- ***主要代码***
-
-  ```js
-  async (input, output) => {
-    const result = await imagemin(input, {
-      destination: output,
-      plugins: [
-        imageminJpegtran({
-          progressive: true, // 开启无损压缩
-          arithmetic: true, // 开启算法
-        }),
-        imageminPngquant({
-          // speed: 10,
-          quality: [0.3, 0.5], // 压缩质量
-        }),
-      ],
-    })
-    return result
-  }
-  ```
-
 一.***以插件形式使用***
 
 1. 根目录下创建 `imagemin.js` 文件
 
     ```js
-    require("image-minify-cli")
+    const imagemin = require("image-minify-cli")
+    imagemin({ 
+      quality: [0.3, 0.5], 
+      input: "./src/asstes", 
+      output: "./src" 
+    })
     ```
 
 2. 执行脚本
 
-    `node imagemin.js start`
+    `node imagemin.js`
 
 二.***命令行使用***
 
 *该功能需要全局安装，推荐先使用第一种方式*
 
-> 查看版本：`imagemin -v`
->
-> 开始压缩：`imagemin start`
+```bash
+# 1. 查看版本
+imagemin -v
+# 2. 查看版本
+# 注意空格，编译结果为 [0.3,0.5] 
+imagemin --quality 0.3 0.5 # --quality 可简写为 -q
+# 3. 图片入口路径
+# 注意路径写法
+imagemin --input ./src/assets # --input 可简写为 -i
+# 4. 图片入口路径。
+# 图片出口路径
+imagemin --output ./src/assets # --output 可简写为 -o
+# 开始压缩
+imagemin start
+```
 
 ```shell
 pnpm add image-minify-cli -g
@@ -101,5 +96,9 @@ npm install image-minify-cli -g
 
 ## ✅ Todo
 
-- [ ] 自定义配置
-- [ ] 命令行动态传参
+- [x] 自定义配置
+- [x] 命令行动态传参
+
+## 👀 更新日志
+
+- 2021.06.15：自定义配置、命令行动态传参
