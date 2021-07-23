@@ -1,7 +1,7 @@
 {
   "name": "image-minify-cli",
   "version": "0.1.0",
-  "description": "Minify images：一键压缩项目中的图片。",
+  "description": "A plugin for compressing image assets",
   "author": "JS-banana",
   "repository": {
     "type": "git",
@@ -21,10 +21,15 @@
     "compress jpg png",
     "minify jpg png",
     "image",
+    "assets",
     "jpg",
     "png"
   ],
   "license": "MIT",
+  "resolutions": {
+    "//": "Install in China,If it is abroad, you can delete it",
+    "bin-wrapper": "npm:bin-wrapper-china"
+  },
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.2.1",
