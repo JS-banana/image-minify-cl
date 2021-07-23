@@ -19,21 +19,32 @@
 
 <!-- # image-minify-cli -->
 
+## 鸣谢
+
+- [imagemin](https://github.com/imagemin/imagemin)
+- [imagemin-cli](https://github.com/imagemin/imagemin-cli)
+- [vite-plugin-imagemin](https://github.com/anncwb/vite-plugin-imagemin)
+
+本项目参考了这几个库及实现思路 ，并以此为核心对功能进行了包装处理，以匹配自身业务需求。
+
 ## ✨ 描述
 
-`image-minify-cli`是为解决项目使用时手动压缩图片的繁琐操作，通过`cli`命令一键压缩。
+`image-minify-cli`可按照图片目录结构压缩输出相同结构。
 
-建议在发布前执行一次即可，压缩完成后会在当前目录下生成日志`imagemin.log`方便查看。
+```js
+// 列如这种结构
+// 最终输出目录也会是这种结构
 
-<!-- ![imagemin](imagemin.png) -->
-
-<!-- ![imagemin-log](imagemin-log.png) -->
+// ——src
+//   |——assets
+//     |——logo.png
+//     |——avatar
+//        |——me.jpg
+```
 
 ## 📦 安装
 
 ```shell
-pnpm add -D image-minify-cli
-# or
 yarn add image-minify-cli -D
 # or
 npm install image-minify-cli -D
@@ -41,6 +52,9 @@ npm install image-minify-cli -D
 
 ## 🚀 使用
 
+### 配置
+
+- 可开启（`log:true`）在压缩完成后是否生成日志`imagemin.log`方便查看。
 - ***默认配置***：
 
   - 支持图片格式：`.{jpg,JPG,jpeg,JPEG,png}`
@@ -48,6 +62,8 @@ npm install image-minify-cli -D
   - png压缩插件：`imagemin-pngquant`
   - 文件入口：当前目录下的 `./src/assets`
   - 文件出口：同入口（压缩完成后直接替换源文件）
+
+### 使用方式
 
 一.***以插件形式使用***
 
@@ -86,18 +102,11 @@ imagemin --output ./src/assets # --output 可简写为 -o
 imagemin start
 ```
 
-```shell
-pnpm add image-minify-cli -g
-# or
-yarn global add image-minify-cli
-# or
-npm install image-minify-cli -g
-```
-
 ## ✅ Todo
 
 - [x] 自定义配置
 - [x] 命令行动态传参
+- [ ] webpack插件plugin
 
 ## 👀 更新日志
 
